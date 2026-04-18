@@ -1,0 +1,129 @@
+{
+  "header": {
+    "logo": "ELRashedy",
+    "nav": {
+      "services": "Services",
+      "books": "Books",
+      "blogs": "Blogs",
+      "socialMedia": "Social Media",
+      "dashboard": "Dashboard",
+      "homepage": "HomePage"
+    },
+    "auth": {
+      "signIn": "Sign In"
+    },
+    "profile": {
+      "edit": "Edit",
+      "save": "Save",
+      "uploadImage": "Upload Image",
+      "signOut": "Sign Out",
+      "cancel": "Cancel"
+    },
+    "lang": {
+      "en": "EN",
+      "ar": "AR"
+    },
+    "error": {
+      "imageTooLarge": "Image must be smaller than 3MB",
+      "nameRequired": "Name is required"
+    }
+  },
+  "landingpage": {
+    "hero": {
+      "typeing": {
+        "one": "Full Stack Developer",
+        "two": "Web Developer",
+        "three": "AI & Automation Developer",
+        "four": "UI/UX Designer"
+      },
+      "hello": "Hello There",
+      "iam": "I'm a",
+      "description": "Passionate about creating beautiful, functional web experiences. I specialize in building full-stack applications with modern technologies and integrating AI solutions to solve real-world problems.",
+      "contactButton": "Contact Me",
+      "ViewProjectsButton": "View Projects"
+    },
+    "skills": {
+      "title": "Skills",
+      "frontend": "Frontend Development",
+      "backend": "Backend Development",
+      "fullstack": "Full Stack Development",
+      "ai": "AI Integration"
+    },
+    "projects": {
+      "title": "Projects & Experience",
+      "experience": "My Experience",
+      "experienceDesc": "My journey so far includes personal projects I built from scratch and two freelance projects on Mostaql that gave me my first taste of real client work. I am still growing in this field, but I show up with curiosity, dedication, and a genuine love for building things that work well. you can check out my projects and certificates on Github, Mostaql, and Linkedin.",
+      "mostaql": "Mostaql",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "view": "View",
+      "liveview": "Live Demo",
+      "certificateone": "Front End Development Libraries",
+      "certificateoneIssuer": "freeCodeCamp",
+      "certificatetwo": "Harvard CS50 With Python and JavaScript",
+      "certificatetwoIssuer": "Harvard University",
+      "Projectone": "This Website",
+      "ProjectoneDesc": "Built with Next.js, Tailwind CSS, and Next-Auth for authentication. It features a responsive design, dark mode, and a user-friendly interface to showcase my portfolio and blog.",
+      "Projecttwo": "Lama Dev",
+      "ProjecttwoDesc": "Engineered a full-stack application with user authentication. You can add posts, delete them and you can change from dark mode to light mode."
+    },
+    "services": {
+      "title": "Services",
+      "webDevelopment": "Web Development",
+      "webDevelopmentDesc": "Building responsive, modern websites with cutting-edge technologies and best practices.",
+      "fullStack": "Full Stack Development",
+      "fullStackDesc": "End-to-end development from frontend UI to backend infrastructure and databases.",
+      "aiIntegration": "AI Integration",
+      "aiIntegrationDesc": "Integrating artificial intelligence and machine learning into your applications.",
+      "automation": "Automation & Scripting",
+      "automationDesc": "Automating repetitive tasks and workflows to increase productivity and efficiency."
+    },
+    "contact": {
+      "title": "Contact Me",
+      "description": "Real messages only — these go straight to my inbox and I will reply as soon as possible.",
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project or inquiry...",
+      "sendButton": "Send Message",
+      "loading": "Sending...",
+      "error": "Failed to send message. Please try again.",
+      "nameerror": "Please enter your name",
+      "emailerr": "Please enter your email",
+      "emailerror": "Please enter a valid email address",
+      "messageerror": "Please enter a message",
+      "messagesent": "Message Sent!",
+      "messagesentdesc": "Your message has been received. I'll reply to you via email soon. Thank you!"
+    },
+    "footer": {
+      "designed": "Designed and developed by Mahmoud Elrashedy",
+      "copyright": "My Website. All rights reserved"
+    }
+  },
+  "books": {
+    "title": "Summarized Books",
+    "question": "What are these books?",
+    "answer": "These are books I have personally read and summarized — highlighting the most important ideas and lessons from each one. I am sharing them here for free so you can get the key takeaways without reading the entire book."
+  },
+  "blogs": {
+    "sort_label": "Sort by:",
+    "sort_latest": "Latest",
+    "sort_views": "Most Viewed",
+    "sort_likes": "Most Liked",
+    "loading": "Loading blogs...",
+    "liked": "Liked",
+    "like": "Like"
+  },
+  "socialmedia": {
+    "heading": "My Social Media",
+    "description": "Welcome to my social corner. I'm Mahmoud — EL Rashedy. I create Personal content and content that break down Physics, Math, and Computer Science in a way that actually makes sense. No boring lectures. No complicated stuff. Just real, simple, and sometimes funny explanations. Whether you're a student, a curious mind, or just someone who wants to learn something new — you're in the right place.New videos regularly. Let's grow together. 🔥",
+    "tiktok": "TikTok",
+    "youtube": "YouTube",
+    "instagram": "Instagram",
+    "findme": "Find me on",
+    "followerCount": "Followers",
+    "subscriberCount": "Subscribers"
+  }
+}

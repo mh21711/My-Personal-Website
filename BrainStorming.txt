@@ -1,0 +1,232 @@
+
+================================================================
+        MMM PORTFOLIO WEBSITE — UI BRAINSTORM & PLANNING
+================================================================
+
+
+----------------------------------------------------------------
+GLOBAL RULES
+----------------------------------------------------------------
+
+- Dark and light mode on every single page
+- English (LTR) and Arabic (RTL) toggle
+  * Affects: all UI text, headers, nav, buttons, labels
+  * Does NOT affect: blog post content, book content, comments
+- Fully responsive on all screen sizes (mobile, tablet, desktop)
+- Header is fixed across the entire website
+- Authentication: Google only
+  * No sign in / sign up pages
+  * Just a Sign In button that redirects to Google
+
+
+----------------------------------------------------------------
+HEADER — appears on all pages
+----------------------------------------------------------------
+
+Left side:
+  - Logo: MMM (styled)
+
+Middle:
+  - Nav links: Services | Books | Blogs | Social Media | Dashboard ( If Admin )
+
+Right side:
+  - Language toggle: EN / AR selector
+  - Dark / Light mode toggle switch
+  - If logged out:
+      * Sign In button (redirects to Google)
+  - If logged in as regular user:
+      * Profile picture replaces Sign In button
+      * Click picture → dropdown appears with:
+          - Profile image 
+          - Name
+          - Email
+          - Edit button → clicking it turns name into
+            a text input with and a small text under profile image say upload image ( user can upload image or edit the name or both and then save ) Save button
+  - If logged in as admin (me):
+      * Same profile dropdown as above
+      * Email icon appears in header
+      * If there are unread emails → red circle on icon
+      * Click email icon → goes to Email Page
+
+
+----------------------------------------------------------------
+HOME PAGE
+----------------------------------------------------------------
+
+ANIMATION RULE:
+  Every section animates from opacity 0 to opacity 100
+  triggered by the user scrolling, not on page load
+
+
+1. HERO SECTION
+   - My photo
+   - Heading: "Hello There"
+   - Animated typing title cycles through:
+       * Full Stack Developer
+       * Web Developer
+       * AI & Automation
+   - Short personal summary paragraph
+
+
+2. SKILLS SECTION
+   - Skill categories with percentage circles
+     (percentage or text label inside the circle)
+   - Horizontal auto-scrolling strip below:
+       * Each item: skill icon + short name (e.g. HTML, CSS)
+       * Scrolls by itself automatically
+       * User can also manually scroll it
+
+
+3. PROJECTS & QUALIFICATIONS
+   - 4 boxes total:
+       * 2 boxes: best projects
+       * 2 boxes: certifications
+   - Links to: GitHub account | LinkedIn account
+
+
+4. SERVICES SECTION
+   - Boxes, each showing a different service I offer
+
+
+5. EXPERIENCE SECTION
+   - 2 boxes for my 2 freelance jobs on Mostaql
+
+
+6. CONTACT FORM
+   - Fields: Title | Sender Email | Description
+   - On submit:
+       * Saves to database
+       * Sends me a real Gmail notification email
+       * Shows confirmation popup to the user
+
+
+7. WHATSAPP BUTTON
+   - Fixed position
+   - LTR: bottom right corner
+   - RTL: bottom left corner
+   - Opens WhatsApp chat with me directly
+
+
+----------------------------------------------------------------
+SOCIAL MEDIA PAGE
+----------------------------------------------------------------
+
+- A photo of me (the one I use on social platforms)
+- Description of my content on social media ( just welcome to my social page and then a description of my content )
+- a fade in effect like the landing page so make sure to make a section observer
+- Three button to link to my youtube - tiktok - instgram
+- Cards for each platform showing:
+    * Platform name and icon
+    * Followers or subscribers count ( is there an API to make it automatically )
+
+
+----------------------------------------------------------------
+BLOGS PAGE
+----------------------------------------------------------------
+
+- Sort selector at the top:
+    * Most Liked | Most Viewed | Latest
+
+- Blog cards, each showing:
+    * Title
+    * Excerpt from description (limited characters) + "..."
+    * Views count
+    * Likes count
+    * Comments count
+    * Like button (user can like directly from this page
+      without opening the blog)
+
+
+----------------------------------------------------------------
+BLOG DETAIL PAGE
+----------------------------------------------------------------
+
+- Title
+- Full description / content (with images between paragraphs)
+- Views count | Likes count
+
+- Admin only (me):
+    * Edit button
+    * Delete button
+
+- Clicking Edit:
+    * Title becomes a text input
+    * Description becomes the rich text editor
+    * Images inside blog become editable
+
+- Comments section:
+    * Comment textarea + Submit button (for logged in users)
+    * Each comment shows:
+        - Profile picture
+        - Name
+        - Comment text
+        - Delete button (admin can delete any comment,
+          user can delete only their own)
+
+
+----------------------------------------------------------------
+BOOKS PAGE
+----------------------------------------------------------------
+
+- Book cards, each showing:
+    * Cover image
+    * Title
+    * Clicking redirects to Book Detail page
+
+- No likes, no views, no comments (keeping it simple)
+
+- Manually Created by Me
+
+
+----------------------------------------------------------------
+BOOK DETAIL PAGE
+----------------------------------------------------------------
+
+- Custom built manually by me
+- Just needs dark mode and light mode support
+- No special features
+
+
+----------------------------------------------------------------
+ADMIN DASHBOARD
+----------------------------------------------------------------
+
+- Users table showing:
+    * Name | Email | Role
+    * Total user count
+
+- Most viewed blog post highlighted
+
+- Button: Create Blog Post → goes to Create Blog Post page
+
+
+----------------------------------------------------------------
+CREATE BLOG POST PAGE
+----------------------------------------------------------------
+
+- Title input field
+- Rich text editor (BlockNote or TipTap) that supports:
+    * Text paragraphs
+    * Image upload button → uploads to Cloudinary → embeds URL
+    * Mix of text and images in any order (text, image, text...)
+- Publish button
+
+
+----------------------------------------------------------------
+EMAIL PAGE (admin only)
+----------------------------------------------------------------
+
+- Every email displayed in a box showing:
+    * Title
+    * Description / message
+    * Sender email
+
+- Clicking an email:
+    * Marks it as read
+    * Background color changes to show it has been read
+
+
+================================================================
+END OF BRAINSTORM
+================================================================
+ 
