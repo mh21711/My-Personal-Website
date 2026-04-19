@@ -21,7 +21,7 @@ const BookCard: React.FC<BookCardProps> = ({ id, title, author, imageUrl, isRTL,
                     isRTL && "text-right"
                 )}
             >
-                <div className="w-full aspect-3/4 overflow-hidden rounded-md mb-3 bg-muted">
+                <div className="relative w-full aspect-3/4 overflow-hidden rounded-md mb-3 bg-muted">
                     <Image
                         src={imageUrl}
                         alt={title}
