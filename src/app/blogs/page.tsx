@@ -15,8 +15,6 @@ export default function BlogsPage() {
   const [loading, setLoading] = useState(true);
   const { isRTL } = useLocale();
 
-  console.log(blogs)
-
   const t = isRTL ? ar.blogs : en.blogs;
 
   useEffect(() => {
