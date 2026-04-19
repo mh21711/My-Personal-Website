@@ -2,7 +2,7 @@
 
 import en from "@/messages/en.json";
 import ar from "@/messages/ar.json";
-import { useState, useRef, useEffect, useCallback, use } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import type { ChangeEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +20,6 @@ import {
   LogOut,
   User,
   Upload,
-  BadgeCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";

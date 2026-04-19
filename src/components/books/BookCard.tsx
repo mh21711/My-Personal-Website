@@ -1,6 +1,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import Image from "next/image";
 
 type BookCardProps = {
     id: string;
@@ -21,10 +22,11 @@ const BookCard: React.FC<BookCardProps> = ({ id, title, author, imageUrl, isRTL,
                 )}
             >
                 <div className="w-full aspect-3/4 overflow-hidden rounded-md mb-3 bg-muted">
-                    <img
+                    <Image
                         src={imageUrl}
                         alt={title}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
                     />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2 line-clamp-2">

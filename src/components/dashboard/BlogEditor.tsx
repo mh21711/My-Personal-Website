@@ -19,7 +19,7 @@ export default function BlogEditor({ initialContent, onChange, editable = true }
   const initialBlocks = useMemo(() => {
     try {
       return initialContent ? JSON.parse(initialContent) : undefined;
-    } catch (e) {
+    } catch {
       return undefined;
     }
   }, [initialContent]);

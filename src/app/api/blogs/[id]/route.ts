@@ -4,12 +4,8 @@ import { authOptions } from '@/lib/auth';
 import connectDB from '@/lib/mongodb';
 import Blog from '@/models/Blog';
 
-interface Params {
-  id: string; // refers to blogNumber
-}
-
 // GET: Find a blog by blogNumber and return as JSON.
-export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+export async function GET(_request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     await connectDB();
 
@@ -34,7 +30,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
 }
 
 // PATCH: Edit a blog (Admin only)
-export async function PATCH(request: NextRequest, { params }: { params: Params }) {
+export async function PATCH(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     await connectDB();
 
@@ -45,7 +41,7 @@ export async function PATCH(request: NextRequest, { params }: { params: Params }
 
     const { title, description } = await request.json();
 
-    const num = Number(params.id);
+    const num = Number((await params).id);
     if (isNaN(num)) {
       return NextResponse.json({ error: 'Invalid blogNumber' }, { status: 400 });
     }
@@ -68,7 +64,7 @@ export async function PATCH(request: NextRequest, { params }: { params: Params }
 }
 
 // DELETE: Delete a blog (Admin only)
-export async function DELETE(request: NextRequest, { params }: { params: Params }) {
+export async function DELETE(_request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     await connectDB();
 
@@ -77,7 +73,7 @@ export async function DELETE(request: NextRequest, { params }: { params: Params 
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const num = Number(params.id);
+    const num = Number((await params).id);
     if (isNaN(num)) {
       return NextResponse.json({ error: 'Invalid blogNumber' }, { status: 400 });
     }

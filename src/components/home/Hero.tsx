@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import en from "@/messages/en.json";
@@ -19,12 +19,12 @@ export function Hero({ isRTL }: HeroProps) {
 
   const t = isRTL ? ar.landingpage.hero : en.landingpage.hero; 
 
-  const TYPING_TEXTS = [
+  const TYPING_TEXTS = useMemo(() => [
     t.typeing.one,
     t.typeing.two,
     t.typeing.three,
     t.typeing.four
-  ];
+  ], [t]);
 
   // Typing effect
   useEffect(() => {
@@ -47,13 +47,16 @@ export function Hero({ isRTL }: HeroProps) {
           setDisplayText(currentText.slice(0, displayText.length - 1));
         }, 50);
       } else {
-        setTextIndex((prev) => (prev + 1) % TYPING_TEXTS.length);
-        setIsTyping(true);
+        // FIX: Wrap these in a timeout to avoid synchronous cascading renders
+        timeout = setTimeout(() => {
+          setTextIndex((prev) => (prev + 1) % TYPING_TEXTS.length);
+          setIsTyping(true);
+        }, 500); // 500ms pause before starting to type the next string
       }
     }
 
     return () => clearTimeout(timeout);
-  }, [displayText, isTyping, textIndex]);
+  }, [displayText, isTyping, textIndex, TYPING_TEXTS]);
 
   // Intersection Observer for fade-in
   useEffect(() => {

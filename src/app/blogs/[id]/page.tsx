@@ -104,7 +104,7 @@ export default function BlogDetailPage() {
   };
 
 
-  function BlogRenderer({ content, isRTL }: RendererProps) {
+  function BlogRenderer({ content }: RendererProps) {
     const { resolvedTheme } = useTheme();
 
     // 1. Parse the JSON back into blocks

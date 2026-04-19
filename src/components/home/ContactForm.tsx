@@ -144,7 +144,7 @@ export function ContactForm({ isRTL }: ContactFormProps) {
           message: '',
         });
       }, 5000);
-    } catch (error) {
+    } catch {
       setFormState({
         status: 'error',
         message: t.error,
@@ -167,7 +167,7 @@ export function ContactForm({ isRTL }: ContactFormProps) {
           {t.title}
         </h2>
         
-        <p className="text-center text-amber-700 mb-8">"{t.description}"</p>
+        <p className="text-center text-amber-700 mb-8">&quot;{t.description}&quot;</p>
 
         {/* Contact Form */}
         <form

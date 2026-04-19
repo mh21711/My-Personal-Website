@@ -1,10 +1,10 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import connectDB from '@/lib/mongodb';
 import Email from '@/models/Email';
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     await connectDB();
 

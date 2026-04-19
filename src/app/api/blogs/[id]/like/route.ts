@@ -5,11 +5,7 @@ import connectDB from '@/lib/mongodb';
 import Blog from '@/models/Blog';
 import mongoose from 'mongoose';
 
-interface Params {
-  id: string; // blogNumber
-}
-
-export async function POST(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+export async function POST(_request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     await connectDB();
 

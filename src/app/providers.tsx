@@ -11,11 +11,14 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   const isRTL = locale === "ar"
 
   useEffect(() => {
-    const stored = window.localStorage.getItem("locale")
+    const stored = window.localStorage.getItem("locale");
     if (stored === "en" || stored === "ar") {
-      setLocale(stored)
+      // Use a timeout to avoid calling setState synchronously
+      setTimeout(() => {
+        setLocale(stored);
+      }, 0);
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
     document.documentElement.lang = locale
