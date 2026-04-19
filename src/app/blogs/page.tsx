@@ -17,11 +17,14 @@ export default function BlogsPage() {
 
   const t = isRTL ? ar.blogs : en.blogs;
 
+  console.log(blogs)
+
   useEffect(() => {
     async function fetchBlogs() {
       try {
         const response = await fetch('/api/blogs');
         const data = await response.json();
+        console.log('Fetched blogs:', data);
         setBlogs(data);
       } catch (error) {
         console.error('Failed to fetch blogs:', error);
@@ -54,7 +57,7 @@ export default function BlogsPage() {
   }
 
   return (
-    <main className="min-h-screen bg-background lg:pt-12 lg:px-12 pt-6">
+    <main className="mb-15 min-h-screen bg-background lg:pt-12 lg:px-12 pt-6">
       <div className="container mx-auto px-4">
         {/* Page Title */}
         <h1 className="text-balance text-4xl font-bold mb-12 text-foreground">

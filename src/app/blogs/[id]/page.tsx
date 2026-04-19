@@ -339,7 +339,7 @@ export default function BlogDetailPage() {
         {/* Header with Admin Controls */}
         <div dir='ltr' className="flex flex-col sm:flex-row justify-between items-start mb-8">
           <div className="flex-1">
-            <div className="flex items-center gap-4">
+            <div className="flex  items-center gap-4">
               <div className="flex items-center gap-3">
                 <div className="relative w-10 h-10">
                   <Image
@@ -357,12 +357,12 @@ export default function BlogDetailPage() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-4 text-muted-foreground text-sm border-l border-border pl-4">
-                <div className="flex items-center gap-1">
+              <div className="flex items-center gap-4 text-muted-foreground text-sm border-l border-border pl-2 sm:pl-4">
+                <div className="flex flex-col sm:flex-row items-center gap-1">
                   <Eye size={16} />
                   <span>{blog.views.length} {t.views}</span>
                 </div>
-                <div className="flex items-center gap-1">
+                <div className="flex flex-col sm:flex-row items-center gap-1">
                   <Heart size={16} />
                   <span>{blog.likes.length} {t.likes}</span>
                 </div>
@@ -503,7 +503,6 @@ export default function BlogDetailPage() {
                         </p>
                       </div>
                     </div>
-                    <p className="px-2 text-foreground mt-2">{comment.text}</p>
                   </div>
 
                   {/* Delete Menu */}
@@ -537,6 +536,8 @@ export default function BlogDetailPage() {
                     </div>
                   )}
                 </div>
+
+                <p className="mb-5 text-right text-foreground mt-2">{comment.text}</p>
 
                 <p className="text-xs text-muted-foreground text-right">
                   {new Date(comment.createdAt).toLocaleDateString('en-US', {
