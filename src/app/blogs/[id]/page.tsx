@@ -334,7 +334,7 @@ export default function BlogDetailPage() {
     comment.user._id === session?.user?.id || isAdmin;
 
   return (
-    <main className="min-h-screen bg-background pt-24 pb-12">
+    <main className="min-h-screen bg-background pt-12 sm:pt-24 pb-12">
       <article className="container mx-auto px-4 max-w-5xl mb-24">
         {/* Header with Admin Controls */}
         <div dir='ltr' className="flex flex-col sm:flex-row justify-between items-start mb-8">
