@@ -194,6 +194,26 @@ export default function BlogDetailPage() {
     if (!confirm('Are you sure you want to delete this blog?')) return;
 
     try {
+      // First, delete all comments related to this blog
+      const commentsRes = await fetch(`/api/comments?blogId=${blogId}`);
+      if (commentsRes.ok) {
+        const commentsData = await commentsRes.json();
+        // Delete each comment
+        await Promise.all(
+          commentsData.map((comment: Comment) =>
+            fetch('/api/comments', {
+              method: 'DELETE',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                blogId: parseInt(blogId),
+                commentId: comment._id,
+              }),
+            })
+          )
+        );
+      }
+
+      // Then delete the blog
       const response = await fetch(`/api/blogs/${blogId}`, {
         method: 'DELETE',
       });
