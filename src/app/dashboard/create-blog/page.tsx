@@ -25,6 +25,7 @@ export default function CreateBlogPage() {
   const router = useRouter();
   const [title, setTitle] = useState('');
   const [contentJson, setContentJson] = useState(''); // Stores the editor data
+  const [pinned, setPinned] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
 
@@ -38,6 +39,7 @@ export default function CreateBlogPage() {
     contentLabel: "المحتوى",
     editorLoading: "جاري تحميل المحرر...",
     tip: "نصيحة: اكتب '/' لإدراج الصور أو العناوين أو القوائم مباشرة.",
+    pinnedLabel: "مثبت",
     cancel: "إلغاء",
     publish: "نشر المقال",
     publishing: "جاري النشر...",
@@ -51,6 +53,7 @@ export default function CreateBlogPage() {
     contentLabel: "Content",
     editorLoading: "Loading Editor...",
     tip: "Tip: Type '/' to insert images, headers, or lists directly.",
+    pinnedLabel: "Pinned",
     cancel: "Cancel",
     publish: "Publish Post",
     publishing: "Publishing...",
@@ -83,7 +86,8 @@ export default function CreateBlogPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           title: title.trim(),
-          description: contentJson, 
+          description: contentJson,
+          pinned: pinned,
         }),
       });
 
@@ -124,6 +128,20 @@ export default function CreateBlogPage() {
               placeholder={t.titlePlaceholder}
               className="text-lg font-semibold"
             />
+          </div>
+
+          {/* Pinned Checkbox */}
+          <div className="mb-8 flex items-center gap-3">
+            <input
+              type="checkbox"
+              id="pinned"
+              checked={pinned}
+              onChange={(e) => setPinned(e.target.checked)}
+              className="w-5 h-5 rounded border-border text-primary focus:ring-primary/20 cursor-pointer"
+            />
+            <label htmlFor="pinned" className="text-sm font-medium text-foreground cursor-pointer">
+              {t.pinnedLabel}
+            </label>
           </div>
 
           {/* Editor Container */}

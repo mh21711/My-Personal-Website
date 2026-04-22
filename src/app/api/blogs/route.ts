@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const { title, description } = await request.json();
+    const { title, description, pinned } = await request.json();
 
     if (!title || !description) {
       return NextResponse.json({ error: 'Title and description are required' }, { status: 400 });
@@ -46,6 +46,7 @@ export async function POST(request: NextRequest) {
       description,
       blogNumber: nextBlogNumber, // Assign the new number
       author: session.user.id,
+      pinned: pinned,
     });
 
     return NextResponse.json(blog);

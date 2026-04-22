@@ -39,7 +39,7 @@ export async function PATCH(request: NextRequest, { params }: { params: Promise<
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const { title, description } = await request.json();
+    const { title, description, pinned } = await request.json();
 
     const num = Number((await params).id);
     if (isNaN(num)) {
@@ -48,7 +48,7 @@ export async function PATCH(request: NextRequest, { params }: { params: Promise<
 
     const blog = await Blog.findOneAndUpdate(
       { blogNumber: num },
-      { title, description },
+      { title, description, pinned },
       { new: true }
     ).populate('author', 'name image');
 

@@ -23,5 +23,17 @@ export const books: Book[] = [
     pdfpreview: "https://drive.google.com/file/d/1vr8d22QONEivsTSFMs7ilEX_SyOY9iQ_/preview",
     pdfdownload: "https://drive.google.com/uc?export=download&id=1vr8d22QONEivsTSFMs7ilEX_SyOY9iQ_",
     cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1775743960/71nUfOLyB2L._SY342__em5qnn.jpg"
+  },
+  {
+    id: '2',
+    entitle: 'Code: The Hidden Language of Computer Hardware and Software',
+    artitle: 'كود: اللغة الخفية لأجهزة وبرمجيات الكمبيوتر',
+    enauthor: 'Charles Petzold',
+    arauthor: 'تشارلز بيتزولد',
+    enauthdesc: "Charles Petzold (born 1953) is a celebrated American author and programmer, best known for his ability to bridge the gap between complex hardware and high-level software. A pioneer in Windows programming education, his 1999 masterpiece 'Code' revolutionized technical literature by making low-level computer architecture accessible to everyone. He was honored with the Windows Pioneer Award by Microsoft for his lifelong commitment to educating the global developer community.",
+    arauthdesc: "تشارلز بيتزولد (مواليد 1953) مبرمج ومؤلف أمريكي بارز، يشتهر بقدرته الفائقة على سد الفجوة بين الأجهزة المعقدة والبرمجيات عالية المستوى. يُعد رائدًا في تعليم برمجة ويندوز، وقد أحدث كتابه 'كود' (1999) ثورة في الأدبيات التقنية بجعل هندسة الكمبيوتر العميقة مفهومة للجميع. نال جائزة 'Windows Pioneer' من شركة مايكروسوفت تقديرًا لجهوده المستمرة في تعليم مجتمع المطورين عالميًا.",
+    pdfpreview: "https://drive.google.com/file/d/1NUHQmTCCV4UN_8F1YuUxLBu2VHfdUmLg/preview",
+    pdfdownload: "https://drive.google.com/uc?export=download&id=1NUHQmTCCV4UN_8F1YuUxLBu2VHfdUmLg",
+    cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1776869783/Code-The-Hidden-Language-of-Computer-Hardware-and-Software-Paperback_2db0a862-c932-48a6-b916-7cb5e6277a53.a3e1763ac60b5d63cda09a147a66497f_z4ljoi.jpg"
   }
 ]

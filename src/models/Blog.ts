@@ -8,6 +8,7 @@ export interface IBlog extends Document {
   likes: mongoose.Types.ObjectId[];
   views: mongoose.Types.ObjectId[];
   blogNumber: number;
+  pinned: boolean;
   createdAt: Date;
 }
 
@@ -42,6 +43,10 @@ const BlogSchema = new Schema<IBlog>(
       type: Number,
       required: true,
       unique: true,
+    },
+    pinned: {
+      type: Boolean,
+      default: false,
     },
     createdAt: {
       type: Date,

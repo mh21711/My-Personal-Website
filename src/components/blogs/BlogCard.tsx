@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 
 interface BlogCardProps {
   blog: BlogCard;
+  pinned?: string;
 }
 
 interface BlogCard {
@@ -20,9 +21,10 @@ interface BlogCard {
   createdAt: string | Date; 
   likes: string[]; // Array of User IDs
   views: string[]; // Array of User IDs
+  pinned: boolean;
 }
 
-function BlogCard({ blog }: BlogCardProps) {
+function BlogCard({ blog, pinned }: BlogCardProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [commentCount, setCommentCount] = useState(0);
   const { data: session } = useSession();
@@ -79,7 +81,7 @@ function BlogCard({ blog }: BlogCardProps) {
   return (
     <div
       ref={ref}
-      className={`opacity-0 transition-opacity duration-500 ${
+      className={`relative opacity-0 transition-opacity duration-500 ${
         isVisible ? 'opacity-100' : ''
       }`}
       onClick={handleNavigation}
@@ -110,6 +112,12 @@ function BlogCard({ blog }: BlogCardProps) {
               <p className="text-xs text-muted-foreground">{formattedDate}</p>
             </div>
           </div>
+
+          {pinned !== "" && (
+            <div className="absolute bottom-5 right-10 bg-primary/10 text-primary text-xs px-4 py-2 rounded-full font-medium">
+              {pinned}
+            </div>
+          )}
 
           {/* Stats */}
           <div className="flex items-center gap-4 mb-4" dir="ltr">

@@ -32,6 +32,7 @@ interface BlogPost {
   createdAt: string | Date; 
   likes: string[]; // Array of User IDs
   views: string[]; // Array of User IDs
+  pinned: boolean;
 }
 
 interface Comment {
@@ -66,6 +67,7 @@ export default function BlogDetailPage() {
   const [submitChanges, setSubmitChanges] = useState(false);
   const [editContent, setEditContent] = useState("");
   const [editTitle, setEditTitle] = useState("");
+  const [editPinned, setEditPinned] = useState(false);
   const [openMenuId, setOpenMenuId] = useState<string | null>(null);
   const viewedRef = useRef(false);
   const blogId = params.id as string;
@@ -87,6 +89,7 @@ export default function BlogDetailPage() {
     notFound: "المقال غير موجود",
     save: "حفظ",
     cancel: "إلغاء",
+    pinnedLabel: "مثبت",
   } : {
     views: "views",
     likes: "likes",
@@ -101,6 +104,7 @@ export default function BlogDetailPage() {
     notFound: "Blog not found",
     save: "Save",
     cancel: "Cancel",
+    pinnedLabel: "Pinned",
   };
 
 
@@ -230,6 +234,7 @@ export default function BlogDetailPage() {
     setIsEditing(true);
     setEditTitle(blog?.title || "");
     setEditContent(blog?.description || "");
+    setEditPinned(blog?.pinned || false);
   }
 
  const handleSaveChanges = async () => {
@@ -250,6 +255,7 @@ export default function BlogDetailPage() {
         body: JSON.stringify({
           title: editTitle,
           description: editContent, // This is the JSON string from BlockNote
+          pinned: editPinned,
         }),
       });
 
@@ -421,6 +427,20 @@ export default function BlogDetailPage() {
                 onChange={(e) => setEditTitle(e.target.value)}
                 className="text-lg font-semibold"
               />
+            </div>
+
+            {/* Pinned Checkbox */}
+            <div className="mb-8 flex items-center gap-3">
+              <input
+                type="checkbox"
+                id="editPinned"
+                checked={editPinned}
+                onChange={(e) => setEditPinned(e.target.checked)}
+                className="w-5 h-5 rounded border-border text-primary focus:ring-primary/20 cursor-pointer"
+              />
+              <label htmlFor="editPinned" className="text-sm font-medium text-foreground cursor-pointer">
+                {t.pinnedLabel}
+              </label>
             </div>
 
             {/* Reuse your BlogEditor here */}

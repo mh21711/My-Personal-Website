@@ -17,8 +17,6 @@ export default function BlogsPage() {
 
   const t = isRTL ? ar.blogs : en.blogs;
 
-  console.log(blogs)
-
   useEffect(() => {
     async function fetchBlogs() {
       try {
@@ -37,6 +35,11 @@ export default function BlogsPage() {
   }, []);
 
   const sortedBlogs = [...blogs].sort((a, b) => {
+    // Always put pinned blogs at the top
+    if (a.pinned !== b.pinned) {
+      return a.pinned ? -1 : 1;
+    }
+    
     if (sortBy === 'latest') {
       return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
     } else if (sortBy === 'views') {
@@ -45,6 +48,12 @@ export default function BlogsPage() {
       return b.likes.length - a.likes.length;
     }
   });
+
+  // Get translated pinned label
+  const getPinnedLabel = (pinned: boolean): string => {
+    if (!pinned) return "";
+    return isRTL ? "مثبت" : "Pinned";
+  };
 
   if (loading) {
     return (
@@ -93,6 +102,7 @@ export default function BlogsPage() {
             <BlogCard
               key={blog.blogNumber}
               blog={blog}
+              pinned={getPinnedLabel(blog.pinned)}
             />
           ))}
         </div>
