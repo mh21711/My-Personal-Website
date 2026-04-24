@@ -258,7 +258,9 @@ export default function Header({ locale, onLocaleChange }: HeaderProps) {
               <button
                 key={link.href}
                 onClick={link.onClick}
-                className="cursor-pointer text-sm font-medium transition-all duration-300 relative text-text-secondary hover:text-foreground"
+                className={cn("cursor-pointer text-sm font-medium transition-all duration-300 relative text-text-secondary hover:text-foreground",
+                  isRTL ? "text-right" : "text-left",
+                )}
               >
                 {link.label}
               </button>
@@ -527,7 +529,10 @@ export default function Header({ locale, onLocaleChange }: HeaderProps) {
                     link.onClick?.(e);
                     setMobileMenuOpen(false);
                   }}
-                  className="text-text-secondary hover:text-foreground py-2 text-sm font-medium transition-all duration-300 text-left relative"
+                  className={cn(
+                    "text-text-secondary hover:text-foreground py-2 text-sm font-medium transition-all duration-300 relative",
+                    isRTL ? "text-right" : "text-left"
+                  )}
                 >
                   {link.label}
                 </button>
