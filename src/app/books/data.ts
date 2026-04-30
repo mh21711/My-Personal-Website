@@ -14,6 +14,30 @@ export interface Book {
 export const books: Book[] = [
   {
     id: '1',
+    entitle: 'Rich Dad, Poor Dad',
+    artitle: 'الأب الغني والأب الفقير',
+    enauthor: 'Robert Kiyosaki',
+    arauthor: 'روبرت كيوساكي',
+    enauthdesc: "Robert Kiyosaki is an American businessman and author, best known for his 'Rich Dad Poor Dad' series of personal finance books. He is the founder of Rich Global LLC and the Rich Dad Company, providing personal financial and business education to people through books and videos.",
+    arauthdesc: "روبرت كيوساكي هو رجل أعمال ومؤلف أمريكي، اشتهر بسلسلة كتبه 'الأب الغني والأب الفقير' في مجال التمويل الشخصي. هو مؤسس شركة Rich Dad Company التي تقدم تعليمًا ماليًا وتجاريًا للأفراد من خلال الكتب ومقاطع الفيديو.",
+    pdfpreview: "https://drive.google.com/file/d/12eCBnofvmuWypCRQztZR5E3yNVHr6C8z/preview",
+    pdfdownload: "https://drive.google.com/uc?export=download&id=12eCBnofvmuWypCRQztZR5E3yNVHr6C8z",
+    cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1777555014/s-l960_q7nel1.webp"
+  },
+  {
+    id: '2',
+    entitle: 'The Art of Indifference',
+    artitle: 'فن اللامبالاة',
+    enauthor: 'Mark Manson',
+    arauthor: 'مارك مانسون',
+    enauthdesc: "Mark Manson is an American self-help author and blogger. He is best known for his blog and the international bestseller 'The Subtle Art of Not Giving a F*ck', which challenges traditional self-help advice with a more realistic, evidence-based approach to personal growth and happiness.",
+    arauthdesc: "مارك مانسون هو مؤلف ومدون أمريكي في مجال المساعدة الذاتية. اشتهر بمدونته وبالكتاب الأكثر مبيعاً عالمياً 'فن اللامبالاة'، الذي يتحدى نصائح المساعدة الذاتية التقليدية بنهج أكثر واقعية وقائم على الأدلة لتحقيق النمو الشخصي والسعادة.",
+    pdfpreview: "https://drive.google.com/file/d/1cbM7zb47O2curIoxFv2cUkWV2YcZIS2Q/preview",
+    pdfdownload: "https://drive.google.com/uc?export=download&id=1cbM7zb47O2curIoxFv2cUkWV2YcZIS2Q",
+    cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1777555442/0003_wnnsqi.jpg"
+  },
+  {
+    id: '3',
     entitle: 'How to Win Friends and Influence People',
     artitle: 'كيف تكسب الأصدقاء وتؤثر في الناس',
     enauthor: 'Dale Carnegie',
@@ -25,7 +49,7 @@ export const books: Book[] = [
     cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1775743960/71nUfOLyB2L._SY342__em5qnn.jpg"
   },
   {
-    id: '2',
+    id: '4',
     entitle: 'Code: The Hidden Language of Computer Hardware and Software',
     artitle: 'كود: اللغة الخفية لأجهزة وبرمجيات الكمبيوتر',
     enauthor: 'Charles Petzold',
