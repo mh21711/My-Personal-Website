@@ -1,6 +1,13 @@
 import { MetadataRoute } from 'next';
 import { books } from '@/app/books/data'; // Your static books data
 
+// Define a simple interface for your blog structure
+interface Blog {
+  blogNumber: string | number;
+  updatedAt?: string;
+  createdAt: string;
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
@@ -19,9 +26,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const response = await fetch(`${baseUrl}/api/blogs`, { cache: 'no-store' });
     const blogs = await response.json();
     
-    blogEntries = blogs.map((blog: any) => ({
+    blogEntries = blogs.map((blog: Blog) => ({
       // Using .blogNumber as requested instead of ._id
-      url: `${baseUrl}/blog/${blog.blogNumber}`, 
+      url: `${baseUrl}/blogs/${blog.blogNumber}`, 
       lastModified: new Date(blog.updatedAt || blog.createdAt),
       changeFrequency: 'weekly',
       priority: 0.7,
