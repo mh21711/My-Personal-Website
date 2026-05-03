@@ -15,9 +15,6 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  // Replace with your actual domain once you buy it from EgyHosting
-  metadataBase: new URL("https://your-domain.com"), 
-  
   title: {
     template: "%s | Mahmoud Elrashedy",
     default: "Mahmoud Elrashedy",
@@ -54,7 +51,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     // 2. Alternate Locale: Helps Facebook/WhatsApp recognize the Arabic version
     alternateLocale: ["ar_EG"],
-    url: "https://your-domain.com",
+    url: "https://mahmoudelrashedy.vercel.app",
     siteName: "Mahmoud Elrashedy",
     title: "Mahmoud Elrashedy | محمود الرشيدي",
     description: "Expert software engineering, AI automation, and high-end UI/UX design. هندسة البرمجيات وأتمتة الذكاء الاصطناعي",
@@ -74,6 +71,10 @@ export const metadata: Metadata = {
     description: "Full Stack Developer & AI Automation Specialist specialized in Next.js and Python.",
     images: ["https://res.cloudinary.com/dasl9qdnu/image/upload/v1774020802/My_Picture_aljolv.png"],
   },
+
+  verification: {
+    google: "Oyrj7AOutyW6fAmUPZaTXlMlxRvkAWqHgZzzZ7Q8_dg",
+  },
 };
 
 import Providers from "./providers"
@@ -85,6 +86,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
+      <header>
+        <meta name="google-site-verification" content="Oyrj7AOutyW6fAmUPZaTXlMlxRvkAWqHgZzzZ7Q8_dg" />
+      </header>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning={true}
