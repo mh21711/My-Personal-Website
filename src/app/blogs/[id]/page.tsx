@@ -47,11 +47,6 @@ interface Comment {
   _id: string;
 }
 
-interface RendererProps {
-  content: string; // This is the JSON string from your DB
-  isRTL: boolean;
-}
-
 export default function BlogDetailPage() {
   const router = useRouter();
   const params = useParams();
@@ -106,30 +101,6 @@ export default function BlogDetailPage() {
     cancel: "Cancel",
     pinnedLabel: "Pinned",
   };
-
-
-  function BlogRenderer({ content }: RendererProps) {
-    const { resolvedTheme } = useTheme();
-
-    // 1. Parse the JSON back into blocks
-    const initialContent = content ? JSON.parse(content) : undefined;
-
-    // 2. Initialize the editor in read-only mode
-    const editor = useCreateBlockNote({
-      initialContent,
-      editable: false, // This is the key!
-    });
-
-    return (
-      <div className="bn-rtl" dir="rtl">
-        <BlockNoteView 
-          editor={editor} 
-          theme={resolvedTheme === "dark" ? "dark" : "light"}
-          editable={false}
-        />
-      </div>
-    );
-  }
 
   // Fetch blog and comments
   useEffect(() => {
@@ -461,8 +432,8 @@ export default function BlogDetailPage() {
             </div>
           </>
         ) : (
-          <div className="view-only-blocks mx-auto mb-12">
-            <BlogRenderer content={blog.description} isRTL={isRTL} />
+          <div className="view-only-blocks mx-auto mb-12" dir='rtl'>
+            <BlogEditor initialContent={blog.description} editable={false} />
           </div>
         )}
 
