@@ -140,7 +140,7 @@ export default function BookPage() {
       )}>
         {session && userDownloadCount !== null && (
           <div className="mb-2 text-center text-sm text-muted-foreground">
-            {isRTL ? `التحميلات: ${userDownloadCount}/10` : `Downloads: ${userDownloadCount}/10`}
+            {isRTL ? `التحميلات: ${userDownloadCount}/5` : `Downloads: ${userDownloadCount}/5`}
           </div>
         )}
         <button

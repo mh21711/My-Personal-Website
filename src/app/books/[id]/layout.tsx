@@ -27,11 +27,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: book.entitle, 
     // The description you requested with your name in Arabic
     description: `Read the summary of ${book.entitle} by Mahmoud Elrashedy.`,
-    
-    icons: {
-      icon: "/favicon.ico", // Point to the file in your /public folder
-      apple: "/apple-touch-icon.png", // For iPhones
-    },
 
     openGraph: {
       title: `${book.entitle} | Mahmoud Elrashedy`,

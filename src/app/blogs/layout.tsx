@@ -5,11 +5,6 @@ export const metadata: Metadata = {
   title: "Blog & Writings",
   description: "The personal blog of Mahmoud Elrashedy. Thoughts on life, science, and technology.",
   
-  icons: {
-    icon: "/favicon.ico", // Point to the file in your /public folder
-    apple: "/apple-touch-icon.png", // For iPhones
-  },
-  
   keywords: [
     "Mahmoud Elrashedy blog", 
     "مدونات محمود الرشيدي", 

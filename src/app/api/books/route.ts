@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Book ID is required' }, { status: 400 });
     }
 
-    const DOWNLOAD_LIMIT = 10;
+    const DOWNLOAD_LIMIT = 5;
 
     // Find or create the download record for this user-book pair
     let downloadRecord = await BookDownload.findOne({

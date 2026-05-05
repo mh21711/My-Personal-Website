@@ -29,12 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return {
     title: blog.title, 
     // Since description is JSON, we use a clean fallback text or a custom 'excerpt' field if you have one
-    description: `Read "${blog.title}" by Mahmoud Elrashedy (محمود الرشيدي).`, 
-    
-    icons: {
-      icon: "/favicon.ico", // Point to the file in your /public folder
-      apple: "/apple-touch-icon.png", // For iPhones
-    },
+    description: `Read "${blog.title}" by Mahmoud Elrashedy.`, 
 
     openGraph: {
       title: `${blog.title} | Mahmoud Elrashedy`,
