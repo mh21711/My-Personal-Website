@@ -20,17 +20,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const socialImage = "https://res.cloudinary.com/dasl9qdnu/image/upload/v1775479618/Channel_Avatar_suag7u.png";
+  const socialImage = "/favicon.ico";
 
   return {
     // English title from your data file
     title: book.entitle, 
     // The description you requested with your name in Arabic
-    description: `Read the summary of ${book.entitle} by Mahmoud Elrashedy (محمود الرشيدي).`,
+    description: `Read the summary of ${book.entitle} by Mahmoud Elrashedy.`,
     
+    icons: {
+      icon: "/favicon.ico", // Point to the file in your /public folder
+      apple: "/apple-touch-icon.png", // For iPhones
+    },
+
     openGraph: {
       title: `${book.entitle} | Mahmoud Elrashedy`,
-      description: `Read the summary of ${book.entitle} by Mahmoud Elrashedy (محمود الرشيدي).`,
+      description: `Read the summary of ${book.entitle} by Mahmoud Elrashedy.`,
       type: "article",
       images: [
         {
@@ -43,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
       title: book.entitle,
       description: `Read the summary of ${book.entitle} by Mahmoud Elrashedy.`,
       images: [socialImage],

@@ -31,20 +31,25 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     // Since description is JSON, we use a clean fallback text or a custom 'excerpt' field if you have one
     description: `Read "${blog.title}" by Mahmoud Elrashedy (محمود الرشيدي).`, 
     
+    icons: {
+      icon: "/favicon.ico", // Point to the file in your /public folder
+      apple: "/apple-touch-icon.png", // For iPhones
+    },
+
     openGraph: {
       title: `${blog.title} | Mahmoud Elrashedy`,
       description: "A new post on Mahmoud Elrashedy's personal blog.",
       type: "article",
       publishedTime: blog.createdAt,
       authors: ["Mahmoud Elrashedy"],
-      images: ["https://res.cloudinary.com/dasl9qdnu/image/upload/v1775479618/Channel_Avatar_suag7u.png"],
+      images: ["/favicon.ico"], // Point to the file in your /public folder
     },
     
     twitter: {
       card: "summary_large_image",
       title: blog.title,
       description: "Read the latest post from Mahmoud Elrashedy.",
-      images: ["https://res.cloudinary.com/dasl9qdnu/image/upload/v1775479618/Channel_Avatar_suag7u.png"], // Adds the image to Twitter/X previews
+      images: ["/favicon.ico"], // Point to the file in your /public folder
     },
   };
 }
