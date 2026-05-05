@@ -20,8 +20,13 @@ export const metadata: Metadata = {
     default: "Mahmoud Elrashedy",
   },
   
-  description: "Mahmoud Elrashedy (محمود الرشيدي) - Professional Full Stack Developer, UI/UX Designer, and AI Automation Engineer. Specialized in Next.js, Python, and scalable software solutions for global and Middle Eastern markets.",
-  
+  description: "Mahmoud Elrashedy - Professional Full Stack Developer, UI/UX Designer.",
+
+  icons: {
+    icon: "/favicon.ico", // Point to the file in your /public folder
+    apple: "/apple-touch-icon.png", // For iPhones
+  },
+
   keywords: [
     "Mahmoud Elrashedy", 
     "محمود الرشيدي", 
@@ -54,10 +59,10 @@ export const metadata: Metadata = {
     url: "https://mahmoudelrashedy.vercel.app",
     siteName: "Mahmoud Elrashedy",
     title: "Mahmoud Elrashedy | محمود الرشيدي",
-    description: "Expert software engineering, AI automation, and high-end UI/UX design. هندسة البرمجيات وأتمتة الذكاء الاصطناعي",
+    description: "Expert software engineering, AI automation, and high-end UI/UX design.",
     images: [
       {
-        url: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1774020802/My_Picture_aljolv.png",
+        url: "/favicon.ico", // Point to the file in your /public folder
         width: 1200,
         height: 630,
         alt: "Mahmoud Elrashedy - Software Engineer",
@@ -66,10 +71,10 @@ export const metadata: Metadata = {
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Mahmoud Elrashedy | Full Stack Developer",
     description: "Full Stack Developer & AI Automation Specialist specialized in Next.js and Python.",
-    images: ["https://res.cloudinary.com/dasl9qdnu/image/upload/v1774020802/My_Picture_aljolv.png"],
+    images: ["/favicon.ico"], // Point to the file in your /public folder
   },
 
   verification: {
