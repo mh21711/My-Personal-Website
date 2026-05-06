@@ -36,7 +36,7 @@ const MathCodeBlock = createReactBlockSpec(
         }
         return (
           <div 
-            className="text-center overflow-x-auto selection:bg-blue-200"
+            className="text-center overflow-x-auto selection:bg-blue-200 text-2xl"
             dangerouslySetInnerHTML={{ __html: html }}
             dir="ltr" 
           />
