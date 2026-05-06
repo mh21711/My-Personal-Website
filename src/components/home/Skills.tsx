@@ -119,7 +119,7 @@ export function Skills({ isRTL }: SkillsProps) {
     }
 
     return () => observer.disconnect();
-  }, [SKILL_CATEGORIES]);
+  }, []);
 
   const scrollRef = useRef<HTMLDivElement>(null)
   const isDown = useRef(false)
