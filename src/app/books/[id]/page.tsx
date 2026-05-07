@@ -122,6 +122,14 @@ export default function BookPage() {
               {isRTL ? book.arauthdesc : book.enauthdesc}
             </p>
           )}
+
+          {(isRTL ? book?.arwarning : book?.enwarning) ? (
+            <div className="mt-4 rounded-lg bg-yellow-100 border border-yellow-300 p-4">
+              <p className="text-sm leading-relaxed text-yellow-900">
+                {isRTL ? book?.arwarning : book?.enwarning}
+              </p>
+            </div>
+          ) : null}
         </div>
       </div>
 

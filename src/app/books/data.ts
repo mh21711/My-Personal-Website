@@ -9,11 +9,25 @@ export interface Book {
   pdfdownload: string
   enauthdesc: string
   arauthdesc: string  
+  enwarning?: string
+  arwarning?: string
 }
 
 export const books: Book[] = [
   {
     id: '1',
+    entitle: 'The Quadrant Model Of Cash Flow',
+    artitle: 'النموذج الرباعي للتدفقات النقدية',
+    enauthor: 'Robert Kiyosaki',
+    arauthor: 'روبرت كيوساكي',
+    enauthdesc: "Robert Kiyosaki is an American businessman and author, best known for his 'Rich Dad Poor Dad' series of personal finance books. He is the founder of Rich Global LLC and the Rich Dad Company, providing personal financial and business education to people through books and videos.",
+    arauthdesc: "روبرت كيوساكي هو رجل أعمال ومؤلف أمريكي، اشتهر بسلسلة كتبه 'الأب الغني والأب الفقير' في مجال التمويل الشخصي. هو مؤسس شركة Rich Dad Company التي تقدم تعليمًا ماليًا وتجاريًا للأفراد من خلال الكتب ومقاطع الفيديو.",
+    pdfpreview: "https://drive.google.com/file/d/1l1dmMFOoNDbAKdY5cbhSpRP0ItJwiaHH/preview",
+    pdfdownload: "https://drive.google.com/uc?export=download&id=1l1dmMFOoNDbAKdY5cbhSpRP0ItJwiaHH",
+    cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1778165366/Rich-Dads-Cashflow-Quadrant-Guide-to-Financial-Freedom-392x588_mddxqi.jpg"
+  },
+  {
+    id: '2',
     entitle: 'Rich Dad, Poor Dad',
     artitle: 'الأب الغني والأب الفقير',
     enauthor: 'Robert Kiyosaki',
@@ -25,7 +39,7 @@ export const books: Book[] = [
     cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1777555014/s-l960_q7nel1.webp"
   },
   {
-    id: '2',
+    id: '3',
     entitle: 'The Art of Indifference',
     artitle: 'فن اللامبالاة',
     enauthor: 'Mark Manson',
@@ -37,7 +51,7 @@ export const books: Book[] = [
     cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1777555442/0003_wnnsqi.jpg"
   },
   {
-    id: '3',
+    id: '4',
     entitle: 'How to Win Friends and Influence People',
     artitle: 'كيف تكسب الأصدقاء وتؤثر في الناس',
     enauthor: 'Dale Carnegie',
@@ -49,7 +63,7 @@ export const books: Book[] = [
     cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1775743960/71nUfOLyB2L._SY342__em5qnn.jpg"
   },
   {
-    id: '4',
+    id: '5',
     entitle: 'Code: The Hidden Language of Computer Hardware and Software',
     artitle: 'كود: اللغة الخفية لأجهزة وبرمجيات الكمبيوتر',
     enauthor: 'Charles Petzold',
@@ -59,5 +73,19 @@ export const books: Book[] = [
     pdfpreview: "https://drive.google.com/file/d/1NUHQmTCCV4UN_8F1YuUxLBu2VHfdUmLg/preview",
     pdfdownload: "https://drive.google.com/uc?export=download&id=1NUHQmTCCV4UN_8F1YuUxLBu2VHfdUmLg",
     cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1776869783/Code-The-Hidden-Language-of-Computer-Hardware-and-Software-Paperback_2db0a862-c932-48a6-b916-7cb5e6277a53.a3e1763ac60b5d63cda09a147a66497f_z4ljoi.jpg"
+  },
+  {
+    id: '6',
+    entitle: 'Think And Grow Rich',
+    artitle: 'فكر ازداد ثراءا',
+    arwarning: "تنبيه هام: هذا المحتوى هو مجرد ملخص للنقاط العملية في الكتاب. وجب التنويه أن الكتاب الأصلي يحتوي على أفكار وفلسفات قد تؤدي إلى الشرك بالله (مثل فكرة مخاطبة الكون أو الذكاء اللامتناهي)، وهي أفكار غريبة لا أؤمن بها كلياً ولا أتبناها، ولا علاقة لي بتوجهات المؤلف الفكرية أو العقدية. بناءً عليه، أنا لا أنصح بقراءة الكتاب كاملاً وأكتفي بتقديم هذا الملخص لتجنب تلك الشبهات.",
+    enwarning: "Important Notice: This content is strictly a summary of the practical points in the book. Please be aware that the original book contains ideas and philosophies that may involve polytheistic concepts (such as communicating with the universe or 'Infinite Intelligence'). These are strange ideas that I do not subscribe to or believe in at all, and I have no connection to the author's intellectual or theological views. Consequently, I do not recommend reading the full book and offer this summary instead to avoid those misguided concepts.",
+    enauthor: 'Napoleon Hill',
+    arauthor: 'نابوليون هيل',
+    enauthdesc: "Napoleon Hill (1883-1970) was an American author and speaker, best known for his work on the principles of success. His most famous work, 'Think and Grow Rich' (1937), became a classic in self-help, outlining the steps to achieve personal and financial success.",
+    arauthdesc: "نابوليون هيل (1883-1970) كان مؤلفًا أمريكيًا وخطيبًا، يشتهر بعمله على مبادئ النجاح. عمله الأكثر شهرة 'فكر وازداد ثراءا' (1937) أصبح من الكلاسيكيات في المساعدة الذاتية، حيث يوضح الخطوات لتحقيق النجاح الشخصي والمالي.",
+    pdfpreview: "https://drive.google.com/file/d/1UiwrAirZFLw3ulmvvaTl44sSPkY3mO0y/preview",
+    pdfdownload: "https://drive.google.com/uc?export=download&id=1UiwrAirZFLw3ulmvvaTl44sSPkY3mO0y",
+    cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1778165603/s-l1600_bxyrqh.webp"
   }
 ]

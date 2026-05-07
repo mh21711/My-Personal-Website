@@ -29,7 +29,7 @@ const BookCard: React.FC<BookCardProps> = ({ id, title, author, imageUrl, isRTL,
                         className="object-cover"
                     />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2 line-clamp-2">
+                <h3 className="text-lg font-semibold text-foreground mb-2 line-clamp-1">
                     {title}
                 </h3>
                 <p className="text-sm text-muted-foreground mb-3">
