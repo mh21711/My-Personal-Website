@@ -28,6 +28,18 @@ export const books: Book[] = [
   },
   {
     id: '2',
+    entitle: 'The Seven Habits of Highly Effective People',
+    artitle: 'العادات السبع للكبار فعالية',
+    enauthor: 'Stephen Covey',
+    arauthor: 'ستيفن كوفاي',
+    enauthdesc: "Stephen R. Covey is an American educator and author, best known for his book 'The Seven Habits of Highly Effective People'. He is the founder of the Covey Leadership Center, where he provides training and development in leadership and personal effectiveness.",
+    arauthdesc: "ستيفن ر. كوفاي هو معلم ومؤلف أمريكي، اشتهر بكتابه 'العادات السبع للناس الأكثر فعالية'. وهو مؤسس مركز قيادة كوفاي، حيث يقدم تدريبًا وتطويرًا في القيادة والفعالية الشخصية.",
+    pdfpreview: "https://drive.google.com/file/d/18kuK8KFjenjCtoJ6tzRTWJAk9bjkEtAR/preview",
+    pdfdownload: "https://drive.google.com/uc?export=download&id=18kuK8KFjenjCtoJ6tzRTWJAk9bjkEtAR",
+    cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1778341316/s-l960_2_wyxawt.webp"
+  },
+  {
+    id: '3',
     entitle: 'The Quadrant Model Of Cash Flow',
     artitle: 'النموذج الرباعي للتدفقات النقدية',
     enauthor: 'Robert Kiyosaki',
@@ -39,7 +51,7 @@ export const books: Book[] = [
     cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1778165366/Rich-Dads-Cashflow-Quadrant-Guide-to-Financial-Freedom-392x588_mddxqi.jpg"
   },
   {
-    id: '3',
+    id: '4',
     entitle: 'Rich Dad, Poor Dad',
     artitle: 'الأب الغني والأب الفقير',
     enauthor: 'Robert Kiyosaki',
@@ -51,7 +63,7 @@ export const books: Book[] = [
     cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1777555014/s-l960_q7nel1.webp"
   },
   {
-    id: '4',
+    id: '5',
     entitle: 'The Art of Indifference',
     artitle: 'فن اللامبالاة',
     enauthor: 'Mark Manson',
@@ -63,7 +75,7 @@ export const books: Book[] = [
     cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1777555442/0003_wnnsqi.jpg"
   },
   {
-    id: '5',
+    id: '6',
     entitle: 'How to Win Friends and Influence People',
     artitle: 'كيف تكسب الأصدقاء وتؤثر في الناس',
     enauthor: 'Dale Carnegie',
@@ -75,7 +87,7 @@ export const books: Book[] = [
     cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1775743960/71nUfOLyB2L._SY342__em5qnn.jpg"
   },
   {
-    id: '6',
+    id: '7',
     entitle: 'Blue Ocean Strategy',
     artitle: ' استراتيجية المحيط الأزرق',
     enauthor: 'W. Chan Kim',
@@ -87,7 +99,7 @@ export const books: Book[] = [
     cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1778254020/51-HhCCG6CL._SY445_SX342_ML2__ez5hix.jpg"
   },
   {
-    id: '7',
+    id: '8',
     entitle: 'Code: The Hidden Language of Computer Hardware and Software',
     artitle: 'كود: اللغة الخفية لأجهزة وبرمجيات الكمبيوتر',
     enauthor: 'Charles Petzold',
@@ -99,7 +111,7 @@ export const books: Book[] = [
     cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1776869783/Code-The-Hidden-Language-of-Computer-Hardware-and-Software-Paperback_2db0a862-c932-48a6-b916-7cb5e6277a53.a3e1763ac60b5d63cda09a147a66497f_z4ljoi.jpg"
   },
   {
-    id: '8',
+    id: '9',
     entitle: 'Think And Grow Rich',
     artitle: 'فكر ازداد ثراءا',
     arwarning: "تنبيه هام: هذا المحتوى هو مجرد ملخص للنقاط العملية في الكتاب. وجب التنويه أن الكتاب الأصلي يحتوي على أفكار وفلسفات قد تؤدي إلى الشرك بالله (مثل فكرة مخاطبة الكون أو الذكاء اللامتناهي)، وهي أفكار غريبة لا أؤمن بها كلياً ولا أتبناها، ولا علاقة لي بتوجهات المؤلف الفكرية أو العقدية. بناءً عليه، أنا لا أنصح بقراءة الكتاب وأكتفي بتقديم هذا الملخص لتجنب تلك الشبهات.",
