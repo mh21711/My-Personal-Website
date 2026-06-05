@@ -58,8 +58,8 @@ export const books: Book[] = [
     arauthor: 'روبرت كيوساكي',
     enauthdesc: "Robert Kiyosaki is an American businessman and author, best known for his 'Rich Dad Poor Dad' series of personal finance books. He is the founder of Rich Global LLC and the Rich Dad Company, providing personal financial and business education to people through books and videos.",
     arauthdesc: "روبرت كيوساكي هو رجل أعمال ومؤلف أمريكي، اشتهر بسلسلة كتبه 'الأب الغني والأب الفقير' في مجال التمويل الشخصي. هو مؤسس شركة Rich Dad Company التي تقدم تعليمًا ماليًا وتجاريًا للأفراد من خلال الكتب ومقاطع الفيديو.",
-    pdfpreview: "https://drive.google.com/file/d/1yODB3a6ieBHcnFa8-A6ve3y-JSK-TFzO/preview",
-    pdfdownload: "https://drive.google.com/uc?export=download&id=1yODB3a6ieBHcnFa8-A6ve3y-JSK-TFzO",
+    pdfpreview: "https://drive.google.com/file/d/1SIM4iF1OtHpn0epSWbPSDRez9AfOad8M/preview",
+    pdfdownload: "https://drive.google.com/uc?export=download&id=1SIM4iF1OtHpn0epSWbPSDRez9AfOad8M",
     cover: "https://res.cloudinary.com/dasl9qdnu/image/upload/v1777555014/s-l960_q7nel1.webp"
   },
   {
