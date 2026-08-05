@@ -134,7 +134,7 @@ export default function SocialMediaPage() {
             <div className="mb-8 relative">
               <div className="w-60 h-60 rounded-full">
                 <Image
-                  src="https://res.cloudinary.com/dasl9qdnu/image/upload/v1775479618/Channel_Avatar_suag7u.png"
+                  src="https://res.cloudinary.com/dasl9qdnu/image/upload/v1785945379/Upscaled_Channel_umf1gu.webp"
                   alt="Profile"
                   width={160}
                   height={160}
