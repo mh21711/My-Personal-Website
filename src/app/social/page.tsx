@@ -140,6 +140,7 @@ export default function SocialMediaPage() {
                   height={160}
                   className="w-fit h-fit rounded-full object-cover"
                   priority
+                  unoptimized
                 />
               </div>
             </div>
