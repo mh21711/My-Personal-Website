@@ -150,7 +150,7 @@ export function Hero({ isRTL }: HeroProps) {
               {/* Profile image placeholder */}
               <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-primary/20 bg-card/50 backdrop-blur-sm flex items-center justify-center">
                 <div className="w-full h-full bg-linear-to-br from-primary/10 to-background flex items-center justify-center text-muted-foreground">
-                  <Image style={{ width: "90%" }} className='rounded-full' src="https://res.cloudinary.com/dasl9qdnu/image/upload/v1774020802/My_Picture_aljolv.png" alt="Profile Photo" width={350} height={350} priority />
+                  <Image style={{ width: "90%" }} className='rounded-full' src="https://res.cloudinary.com/dasl9qdnu/image/upload/v1785945390/Upscaled_Work_szmdzv.webp" alt="Profile Photo" width={350} height={350} priority />
                 </div>
               </div>
             </div>
